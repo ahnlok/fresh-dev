@@ -12,7 +12,7 @@ module.exports = function(app) {
         }
         res.sendFile(path.join(__dirname, "../public/singup.handlebars"));
     });
-    // Loads Log-In page
+    // Loads Log-In 
     app.get("/login", function(req, res) {
         // If the user already has an account send them to the members page
         if (req.user) {
