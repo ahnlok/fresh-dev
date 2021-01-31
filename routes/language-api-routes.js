@@ -29,7 +29,7 @@ module.exports = function(app) {
         });
     });
     // To Delete Post
-    app.delete("/api/authors/:id", function (req, res) {
+    app.delete("/api/languages/:id", function (req, res) {
         db.Language.destroy({
             where: {
                 id: req.params.id
