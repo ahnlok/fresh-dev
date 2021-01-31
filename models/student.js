@@ -1,41 +1,20 @@
 module.exports = function(sequelize, DataTypes) {
-    var Student = sequelize.define("Language", {
-        fullName: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            validate: {
-                len: [1]
-            }
-        },
-        email: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            validate: {
-                len: [1]
-            }
-        },
-        school: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            validate: {
-                len: [1]
-            }
-        },
-        description: {
-            type: DataTypes.TEXT,
-            allowNull: false,
-            validate: {
-                len: [1]
-            }
-        }
+    var Student = sequelize.define("Student", {
+        fullName: DataTypes.STRING,
+        language: DataTypes.STRING,
+        email: DataTypes.STRING,
+        linkedIn: DataTypes.STRING,
+        gitHub: DataTypes.STRING,
+        resume: DataTypes.STRING,
+        description: DataTypes.STRING,
     });
 
     Student.associate = function(models) {
-        Student.belongsTo(models.Language, {
-            foreignKey: {
-                allowNull: false
-            }
+        Student.belongsTo(models.User, {
+            through: "Language",
+            foreignKey: "studentId",
         });
     };
+    
     return Student;
-}
+};

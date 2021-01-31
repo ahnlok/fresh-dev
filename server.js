@@ -61,7 +61,25 @@ app.get("/api/config", (req, res) => {
 // our routes
 app.use(StudentController);
 
-
+// post - Sung
+// app.post("/api/language", function (req, res) {
+//   console.log(req.body);
+//   db.Language.create({
+//     userId: req.body.userId,
+//     studentId: req.body.studentId,
+//   }).then((newEntry) => {
+//     res.json({
+//       success: true,
+//       message: "Successfully Added Your Post.",
+//       data: newEntry,
+//     });
+//   }).catch((err) => {
+//     res.status(500);
+//     res.json({
+//       success: false,
+//     });
+//   });
+// });
 // Syncing our database and logging a message to the user upon success
 db.sequelize
   .sync()
