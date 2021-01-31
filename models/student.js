@@ -1,33 +1,12 @@
 module.exports = function(sequelize, DataTypes) {
     var Student = sequelize.define("Student", {
-        fullName: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            validate: {
-                len: [1]
-            }
-        },
-        email: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            validate: {
-                len: [1]
-            }
-        },
-        school: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            validate: {
-                len: [1]
-            }
-        },
-        description: {
-            type: DataTypes.TEXT,
-            allowNull: false,
-            validate: {
-                len: [1]
-            }
-        }
+        fullName: DataTypes.STRING,
+        language: DataTypes.STRING,
+        email: DataTypes.STRING,
+        linkedIn: DataTypes.STRING,
+        gitHub: DataTypes.STRING,
+        resume: DataTypes.STRING,
+        description: DataTypes.STRING,
     });
 
     Student.associate = function(models) {
@@ -38,4 +17,4 @@ module.exports = function(sequelize, DataTypes) {
     };
     
     return Student;
-}
+};
