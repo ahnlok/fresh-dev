@@ -33,10 +33,10 @@ app.use(passport.session());
 
 // Requiring our routes
 // Do NOT Change or Delete -Sung
-require("./routes/html-routes.js")(app);
-require("./routes/api-routes.js")(app);
-require("./routes/language-api-routes.js")(app);
-require("./routes/student-api-routes.js")(app);
+// require("./routes/html-routes.js")(app);
+// require("./routes/api-routes.js")(app);
+// require("./routes/language-api-routes.js")(app);
+// require("./routes/student-api-routes.js")(app);
 // Do NOT Change or Delete -Sung
 
 app.engine(
