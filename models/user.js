@@ -27,11 +27,11 @@ module.exports = function(sequelize, DataTypes) {
         user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10), null);
     });
     // Associate User
-    User.associate = function (models) {
-        User.belongsToMany(models.Student, {
-            through: "Language",
-            foreignKey: "userId",
-        });
-    }
+    // User.associate = function (models) {
+    //     User.belongsToMany(models.Student, {
+    //         through: "Language",
+    //         foreignKey: "userId",
+    //     });
+    // }
     return User;
 };
