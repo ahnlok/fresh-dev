@@ -1,4 +1,4 @@
-INSERT INTO student (name, email, school, description)
+INSERT INTO student (fullName, email, school, description)
 VALUES
 ("Alice Baker", "abaker@abccorp.com", "GT-FT", "Alice is here to learn some things."),
 ("Charlie Donner", "cdonner@defplace.com", "GT-FT", "Charlie is here to learn some things."),
@@ -6,13 +6,13 @@ VALUES
 ("George Halfthor", "ghalfthor@jklfoo.com", "GT-FT", "George is here to learn some things."),
 ("Ingrid Jones", "ijones@mnobar.com", "GT-FT", "Ingrid is here to learn some things.");
 
-INSERT INTO lang (lang)
+INSERT INTO language (language)
 VALUES
 ("Javascript"),
 ("React"),
-("Python")
+("Python");
 
-INSERT INTO student_lang (student_id, lang_id)
+INSERT INTO student_language (student_id, language_id)
 VALUES
 (1, 1),
 (1, 2),
