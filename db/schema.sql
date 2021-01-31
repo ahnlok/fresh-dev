@@ -1,8 +1,9 @@
-DROP DATABASE IF EXISTS fresh-dev-db;
+<<<<<<< HEAD
+DROP DATABASE IF EXISTS freshdev_db;
 
-CREATE DATABASE fresh-dev-db;
+CREATE DATABASE freshdev_db;
 
-USE fresh-dev-db;
+USE freshdev_db;
 
 CREATE TABLE language (
 	id INTEGER NOT NULL AUTO_INCREMENT,
