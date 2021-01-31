@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-    var Student = sequelize.define("Language", {
+    var Student = sequelize.define("Student", {
         fullName: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -31,11 +31,11 @@ module.exports = function(sequelize, DataTypes) {
     });
 
     Student.associate = function(models) {
-        Student.belongsTo(models.Language, {
-            foreignKey: {
-                allowNull: false
-            }
+        Student.belongsTo(models.User, {
+            through: "Language",
+            foreignKey: "userId",
         });
     };
+    
     return Student;
 }
