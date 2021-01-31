@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 DROP DATABASE IF EXISTS freshdev_db;
 
 CREATE DATABASE freshdev_db;
