@@ -1,4 +1,4 @@
-const { Model } = require("sequelize/types");
+
 var db = require("../models");
 
 model.exports = function(app) {
@@ -18,7 +18,7 @@ model.exports = function(app) {
         });
     });
     // Get Selected Post
-    app.get("/api/studentss/:id", function (req, res) {
+    app.get("/api/students/:id", function (req, res) {
         db.Student.findOne({
             where: {
                 id: req.params.id
