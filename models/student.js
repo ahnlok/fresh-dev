@@ -12,7 +12,7 @@ module.exports = function(sequelize, DataTypes) {
     Student.associate = function(models) {
         Student.belongsTo(models.User, {
             through: "Language",
-            foreignKey: "userId",
+            foreignKey: "studentId",
         });
     };
     
