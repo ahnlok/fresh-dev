@@ -1,3 +1,4 @@
+// Requiring necessary npm packages
 const express = require("express");
 // Please do not delete this line ("session") -Sung
 const session = require("express-session");
@@ -11,9 +12,13 @@ const {
 } = require("@handlebars/allow-prototype-access");
 const app = express();
 const db = require("./models");
-const TrainsController = require("./controllers/trainsController");
+
+const StudentController = require("./controllers/studentController");
+
+// Setting up port
 const PORT = process.env.PORT || 8080;
 
+// Creating express app and configuring middleware 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // Please Do NOT delete this line ("public") -Sung
@@ -53,8 +58,11 @@ app.get("/api/config", (req, res) => {
   });
 });
 
-app.use(TrainsController);
+// our routes
+app.use(StudentController);
 
+
+// Syncing our database and logging a message to the user upon success
 db.sequelize
   .sync()
   .then(() => {
