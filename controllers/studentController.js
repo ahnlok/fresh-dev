@@ -1,3 +1,5 @@
+// StudentController.js
+
 const express = require("express");
 const db = require("../models");
 
@@ -7,9 +9,9 @@ const router = express.Router();
  * Route to render all students to a page. 
  */
 router.get("/students", (req, res) => {
-  db.Train.findAll()
-    .then((allTrains) => {
-      res.render("all-students", { students: allTrains });
+  db.Student.findAll()
+    .then((allStudents) => {
+      res.render("allStudents", { students: allStudents });
     })
     .catch((err) => {
       console.log(err);
@@ -22,7 +24,7 @@ router.get("/students", (req, res) => {
  * Route to render the new student form.
  */
 router.get("/students/new", (req, res) => {
-  res.render("new-student");
+  res.render("newStudent");
 });
 
 /**
@@ -30,9 +32,9 @@ router.get("/students/new", (req, res) => {
  * Render the student data to a pre-populate form.
  */
 router.get("/students/:id/edit", (req, res) => {
-  db.Train.findOne({ where: { id: req.params.id } })
-    .then((singleTrain) => {
-      res.render("edit-student", singleTrain.dataValues);
+  db.Student.findOne({ where: { id: req.params.id } })
+    .then((singleStudent) => {
+      res.render("editStudent", singleStudent.dataValues);
     })
     .catch((err) => {
       console.log(err);
@@ -44,12 +46,12 @@ router.get("/students/:id/edit", (req, res) => {
  * Display information about a single student.
  */
 router.get("/students/:id", (req, res) => {
-  db.Train.findOne({
+  db.Student.findOne({
     where: { id: req.params.id },
   })
-    .then((singleTrain) => {
-      // console.log(singleTrain.dataValues);
-      res.render("single-student", singleTrain.dataValues);
+    .then((singleStudent) => {
+      // console.log(singleStudent.dataValues);
+      res.render("singleStudent", singleStudent.dataValues);
     })
     .catch((err) => {
       res.status(500).end();
@@ -60,9 +62,9 @@ router.get("/students/:id", (req, res) => {
  * API Route to create a new student.
  */
 router.post("/api/students", (req, res) => {
-  db.Train.create(req.body)
-    .then((createdTrain) => {
-      res.json(createdTrain);
+  db.Student.create(req.body)
+    .then((createdStudent) => {
+      res.json(createdStudent);
     })
     .catch((err) => {
       console.log(err);
@@ -74,7 +76,7 @@ router.post("/api/students", (req, res) => {
  * API Route to update an existing student by ID
  */
 router.put("/api/students/:id", (req, res) => {
-  db.Train.update(req.body, {
+  db.Student.update(req.body, {
     where: {
       id: req.params.id,
     },
@@ -92,7 +94,7 @@ router.put("/api/students/:id", (req, res) => {
  * API Route to delete a student by ID
  */
 router.delete("/api/students/:id", (req, res) => {
-  db.Train.delete({
+  db.Student.delete({
     where: {
       id: req.params.id,
     },
