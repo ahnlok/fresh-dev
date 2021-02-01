@@ -13,8 +13,13 @@ CREATE TABLE language (
 CREATE TABLE student (
 	id INTEGER NOT NULL AUTO_INCREMENT,
     fullName VARCHAR(100) NOT NULL,
-    email VARCHAR(100) NOT NULL,
+    mainLanguage VARCHAR(100),
+    subLanguage VARCHAR(100),
     school VARCHAR(100),
+    email VARCHAR(100) NOT NULL,
+    linkedIn VARCHAR(100) NOT NULL,
+    gitHub VARCHAR(100) NOT NULL,
+    resume VARCHAR(100) NOT NULL,
     description TEXT,
     PRIMARY KEY (id)
 );
