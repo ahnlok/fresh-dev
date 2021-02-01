@@ -1,21 +1,9 @@
-{{!-- <nav class="light-blue lighten-1" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Home Button</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="#">Post</a></li>
-        <li><a href="#">View Saved</a></li>
-      </ul>
-
-      <ul id="nav-mobile" class="sidenav">
-        <li><a href="#">Post</a></li>
-        <li><a href="#">View Saved</a></li>
-      </ul>
-      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-    </div>
-  </nav> --}}
+{{> navbar}}
 
   {{!-- POST Form--}}
-  <h1 class="post-title"> New Student Form </h1>
-  <h4 class="post-require"> (* indicates required fields) </h4>
+ 
+    <h1 class="post-title center-align"> New Student Form </h1>
+    <h4 class="post-require center-align"> (* indicates required fields) </h4>
     <div class="container">
         <div class="row">
             <form class="col s12" id="new-post-form">
@@ -41,13 +29,15 @@
                  <div class="row">
                     <div class="input-field col s12">
                         <input id="school" type="text">
-                        <label for="school">Name of Your Latest Education*</label>
+                        <label for="school">School Name*</label>
                     </div>
                 </div>
                 {{!-- Main Language --}}
                 <div class="row">
-                     <input placeholder="Main Programming Language" id="main_language" type="text">
+                    <div class="input-field col s12">
+                        <input placeholder="Main Programming Language" id="main_language" type="text">
                         <label for="main_language">Pick One Main Programming Language (Please Type Only One)*</label>
+                    </div>
                     {{!-- <form action="#" id="main_language">
                         <label for="main_language">Choose Your Main Programming Language</label>
                         <p>

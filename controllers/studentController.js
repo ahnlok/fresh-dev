@@ -22,6 +22,25 @@ router.get("/students", (req, res) => {
 });
 
 /**
+ * Route to render the saved pages route.
+ */
+router.get("/students/saved", (req, res) => {
+  db.Student.findAll()
+    .then((allStudents) => {
+      console.log(allStudents);
+      res.render("saved", {
+        students: allStudents
+      });
+    })
+    .catch((err) => {
+      console.log(err);
+      //TODO: render 404 page if we're unable to return students
+      res.status(500).end();
+    });
+  // res.render("saved");
+});
+
+/**
  * Route to render the new student form.
  */
 router.get("/students/new", (req, res) => {
