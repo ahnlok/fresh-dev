@@ -1,23 +1,24 @@
 <h1 class="center-align">Saved Posts</h1>
 
-<ul>
-    {{#each students }}
-        <h5>{{fullName}}</h5>
-        <h5>{{mainLanguage}}</h5>
-        <h5>{{subLanguage}}</h5>
-        <h5>{{school}}</h5>
-        <h5>{{email}}</h5>
-        <h5>{{linkedIn}}</h5>
-        <h5>{{gitHub}}</h5>
-        <h5>{{resume}}</h5>
-        <h5>{{description}}</h5>
-    {{/each}}
-</ul>
+{{!-- <ul> --}}
 
+
+
+    {{!-- </ul> --}}
+
+{{#each students }}
 <div class="container orange lighten-4">
     <div class="row">
         <div class="col m6">
-            <h6>User's info</h6>
+            <h5>{{fullName}}</h5>
+            <h5>{{mainLanguage}}</h5>
+            <h5>{{subLanguage}}</h5>
+            <h5>{{school}}</h5>
+            <h5>{{email}}</h5>
+            <h5>{{linkedIn}}</h5>
+            <h5>{{gitHub}}</h5>
+            <h5>{{resume}}</h5>
+            <h5>{{description}}</h5>
         </div>
         <div class="col m6">
             <div class="row">
@@ -33,3 +34,4 @@
         </div>
     </div>
 </div>
+{{/each}}
