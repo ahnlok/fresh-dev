@@ -1,9 +1,10 @@
 
 $(document).ready(function () {
-    $("new-post-form").on("submit", function (event) {
+    $("#new-post-form").on("submit", function (event) {
         event.preventDefault();
         console.log("You successfully post")
-        const newPost = {
+        const newPost =
+        {
             firstName: $("#first_name").val(),
             lastName: $("#last_name").val(),
             email: $("#email").val(),
