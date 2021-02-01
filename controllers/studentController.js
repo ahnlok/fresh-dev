@@ -25,7 +25,7 @@ router.get("/students", (req, res) => {
  * Route to render the new student form.
  */
 router.get("/students/new", (req, res) => {
-  res.render("newStudent");
+  res.render("post");
 });
 
 /**
