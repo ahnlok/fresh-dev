@@ -22,7 +22,7 @@ const PORT = process.env.PORT || 8080;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // Please Do NOT delete this line ("public") -Sung
-app.use(express.static("public"));
+app.use(express.static(__dirname + "/public"));
 // Please DO NOT delete this line ("keyboard cat")-Sung
 // We need to use session to Keep track of our user's login status
 // Do NOT Change or Delete -Sung

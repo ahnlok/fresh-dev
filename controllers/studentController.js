@@ -63,6 +63,8 @@ router.get("/students/:id", (req, res) => {
  * API Route to create a new student.
  */
 router.post("/api/students", (req, res) => {
+  console.log(req.body);
+  
   db.Student.create(req.body)
     .then((createdStudent) => {
       res.json(createdStudent);

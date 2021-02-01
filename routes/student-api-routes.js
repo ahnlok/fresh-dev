@@ -30,8 +30,8 @@ model.exports = function(app) {
     });
     // Save Post
     app.post("/api/students", function(req,res) {
-        db.Student.create(req.body).then
-        (function(dbStudent) {
+        db.Student.create(req.body).then( function(dbStudent) {
+            console.log(dbStudent);
             res.json(dbStudent);
         });
     });
