@@ -1,3 +1,5 @@
+// StudentLanguage.js
+
 // This will bring out the listed posts information
 module.exports = function(sequelize, DataTypes) {
     var StudentLanguage = sequelize.define (

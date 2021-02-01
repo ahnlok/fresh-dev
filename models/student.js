@@ -1,3 +1,5 @@
+// Student.js
+
 module.exports = function(sequelize, DataTypes) {
     var Student = sequelize.define("Student", {
         fullName: DataTypes.STRING,
