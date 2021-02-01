@@ -1,3 +1,5 @@
+// User.js
+
 var bcrypt = require("bcryptjs");
 
 module.exports = function(sequelize, DataTypes) {
