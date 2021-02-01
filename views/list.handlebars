@@ -1,1 +1,12 @@
-<h1>My new student form will go here.</h1>
+{{> navbar}}
+<h1>All Students</h1>
+{{#each students}}
+<h1 class="fullName">{{fullName}}</h1>
+<p class="mainLanguage">{{mainLanguage}}</p>
+<p class="subLanguage">{{subLanguage}}</p>
+<p class="school">{{school}}</p>
+<p class="email">{{email}}</p>
+<p class="gitHub">{{gitHub}}</p>
+<p class="resume">{{resume}}</p>
+<p class="description">{{description}}</p>
+{{/each}}
