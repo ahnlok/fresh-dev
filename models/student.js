@@ -13,7 +13,7 @@ module.exports = function(sequelize, DataTypes) {
     });
 
     Student.associate = function(models) {
-        Student.belongsTo(models.Language, {
+        Student.belongsToMany(models.Language, {
             through: "StudentLanguage",
             foreignKey: "student_id",
         });
