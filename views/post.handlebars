@@ -1,18 +1,5 @@
-{{!-- <nav class="light-blue lighten-1" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Home Button</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="#">Post</a></li>
-        <li><a href="#">View Saved</a></li>
-      </ul>
 
-      <ul id="nav-mobile" class="sidenav">
-        <li><a href="#">Post</a></li>
-        <li><a href="#">View Saved</a></li>
-      </ul>
-      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-    </div>
-  </nav> --}}
-
+{{> navbar}}
   {{!-- POST Form--}}
   <h1 class="post-title"> POST </h1>
   <h4 class="post-require"> (* indicates required fields) </h4>
@@ -41,7 +28,7 @@
                  <div class="row">
                     <div class="input-field col s12">
                         <input id="school" type="text">
-                        <label for="school">Name of Your Latest Education*</label>
+                        <label for="school">Name of School*</label>
                     </div>
                 </div>
                 {{!-- Main Language --}}
