@@ -11,7 +11,8 @@ const router = express.Router();
 router.get("/students", (req, res) => {
   db.Student.findAll()
     .then((allStudents) => {
-      res.render("allStudents", { students: allStudents });
+      console.log(allStudents);
+      res.render("list", { students: allStudents });
     })
     .catch((err) => {
       console.log(err);
