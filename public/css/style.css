@@ -4,4 +4,11 @@ nav {
 }
 
 /* For POST (Sung) */
-/* input styling */
+.post-title{
+    font-weight: bold;
+    text-align: center;
+}
+.post-require{
+    font-weight: bold;
+    text-align: center;
+}
