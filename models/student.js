@@ -1,6 +1,7 @@
 // Student.js
 
 module.exports = function(sequelize, DataTypes) {
+    // variablename.define(modelname:string, attrib:obj, options:obj)
     var Student = sequelize.define("Student", {
         fullName: DataTypes.STRING,
         mainLanguage: DataTypes.STRING,
@@ -10,6 +11,9 @@ module.exports = function(sequelize, DataTypes) {
         gitHub: DataTypes.STRING,
         resume: DataTypes.STRING,
         description: DataTypes.TEXT,
+    },
+    {       // This is the options object
+        timestamps: false,
     });
 
     Student.associate = function(models) {

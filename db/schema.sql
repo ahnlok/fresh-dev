@@ -4,13 +4,13 @@ CREATE DATABASE freshdev_db;
 
 USE freshdev_db;
 
-CREATE TABLE language (
+CREATE TABLE languages (
 	id INTEGER NOT NULL AUTO_INCREMENT,
     language VARCHAR(100),
     PRIMARY KEY(id)
 );
 
-CREATE TABLE student (
+CREATE TABLE students (
 	id INTEGER NOT NULL AUTO_INCREMENT,
     fullName VARCHAR(100) NOT NULL,
     mainLanguage VARCHAR(100),
@@ -28,7 +28,7 @@ CREATE TABLE student_language (
 	id INTEGER NOT NULL AUTO_INCREMENT,
 	student_id INTEGER,
 	language_id INTEGER,
-    FOREIGN KEY (language_id) REFERENCES language (id),
-    FOREIGN KEY (student_id) REFERENCES student (id),
+    FOREIGN KEY (language_id) REFERENCES languages (id),
+    FOREIGN KEY (student_id) REFERENCES students (id),
     PRIMARY KEY(id)
 );
