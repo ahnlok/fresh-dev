@@ -1,9 +1,113 @@
-{{!-- <h1>{{name}}</h1>
-<p>{{number}}</p>
-<p>{{status}}</p>
-<p>{{currentStation}}</p>
-<p>{{eta}}</p> --}}
-<h1>{{name}}</h1>
-<p>{{email}}</p>
-<p>{{school}}</p>
-<p>{{description}}</p>
+{{!-- <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Home Button</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Post</a></li>
+        <li><a href="#">View Saved</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="#">Post</a></li>
+        <li><a href="#">View Saved</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav> --}}
+
+  {{!-- POST Form--}}
+  <h1 class="post-title"> POST </h1>
+  <h4 class="post-require"> (* indicates required fields) </h4>
+    <div class="container">
+        <div class="row">
+            <form class="col s12" id="new-post-form">
+                {{!-- Name --}}
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input placeholder="First Name" id="first_name" type="text" class="validate">
+                        <label for="first_name">First Name*</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input placeholder="Last Name" id="last_name" type="text" class="validate">
+                        <label for="last_name">Last Name*</label>
+                    </div>
+                </div>
+                {{!-- Email --}}
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="email" type="email" class="validate">
+                        <label for="email">Email*</label>
+                    </div>
+                </div>
+                {{!-- School --}}
+                 <div class="row">
+                    <div class="input-field col s12">
+                        <input id="school" type="text">
+                        <label for="school">Name of Your Latest Education*</label>
+                    </div>
+                </div>
+                {{!-- Main Language --}}
+                <div class="row">
+                     <input placeholder="Main Programming Language" id="main_language" type="text">
+                        <label for="main_language">Pick One Main Programming Language (Please Type Only One)*</label>
+                    {{!-- <form action="#" id="main_language">
+                        <label for="main_language">Choose Your Main Programming Language</label>
+                        <p>
+                            <label>
+                                <input name="group1" type="radio" />
+                                <span>JavaScript</span>
+                            </label>
+                            <label>
+                                <input name="group1" type="radio" />
+                                <span>Python</span>
+                            </label>
+                            <label>
+                                <input name="group1" type="radio" />
+                                <span>React</span>
+                            </label>
+                        </p>
+                    </form> --}}
+                </div>
+                {{!-- Secondary Language --}}
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input placeholder="Secondary Programming Language" id="secondary_language" type="text">
+                        <label for="secondary_language">Pick Secondary Programming  Languages (1-3 Languages)</label>
+                    </div>
+                </div>
+                {{!-- LinkedIn --}}
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="linkedIn" type="text" class="validate">
+                        <label for="linkedIn">LinkedIn Profile Link*</label>
+                    </div>
+                </div>
+                {{!-- GitHub  --}}
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="gitHub" type="text" class="validate">
+                        <label for="gitHub">GitHub Profile Link*</label>
+                    </div>
+                </div>
+                {{!-- Resume --}}
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="resume" type="text">
+                        <label for="resume">Your Resume Link</label>
+                    </div>
+                </div>
+                {{!-- Description --}}
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="description" type="text">
+                        <label for="description">Short Description About Yourself (Less than 50 words)</label>
+                    </div>
+                </div>
+                {{!-- Submit Button --}}
+                <button class="btn waves-effect waves-light" type="submit" name="action">Submit Your Post
+                    <i class="material-icons right">send</i>
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="/public/js/post.js"></script>
