@@ -22,6 +22,13 @@ router.get("/students", (req, res) => {
 });
 
 /**
+ * Route to render the saved pages route.
+ */
+router.get("/students/saved", (req, res) => {
+  res.render("saved");
+});
+
+/**
  * Route to render the new student form.
  */
 router.get("/students/new", (req, res) => {
