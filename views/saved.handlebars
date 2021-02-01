@@ -1,1 +1,34 @@
-<h1>My edit student form will go here with pre-populated data.</h1>>
+{{> navbar}}
+
+<h1 class="center-align">Saved Posts</h1>
+
+
+{{#each students }}
+<div class="container orange lighten-4">
+    <div class="row">
+        <div class="col m6">
+            <h5>{{fullName}}</h5>
+            <h5>{{mainLanguage}}</h5>
+            <h5>{{subLanguage}}</h5>
+            <h5>{{school}}</h5>
+            <h5>{{email}}</h5>
+            <h5>{{linkedIn}}</h5>
+            <h5>{{gitHub}}</h5>
+            <h5>{{resume}}</h5>
+            <h5>{{description}}</h5>
+        </div>
+        <div class="col m6">
+            <div class="row">
+                <div class="col m12 right-align">
+                    <button class="hoverable">Save</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col m12 right-align">
+                    <button class="hoverable">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{/each}}
