@@ -6,6 +6,8 @@ $("#search-btn").on("click", function () {
   window.location.href = "/students/search/" + searchedLanguage;
 });
 
+
+
 /**
  * getPexelsImage
  * Call to Pexels API
@@ -50,29 +52,4 @@ function getPexelsImage(searchTerm, numImages) {
   });
 }
 
-/**
- * showCredits
- * Desc: A function appending links to creator pages
- */
-function showCredits() {
-  var creditsDiv = $("<div>").addClass("fixed-bottom creditDiv");
-
-  var creditPexelsEl = $("<p>")
-    .html(
-      'Photos provided by <a class="creditLink" href="https://www.pexels.com/" target="_blank">Pexels</a>'
-    )
-    .addClass("m-0");
-  $(creditsDiv).append(creditPexelsEl);
-  $(creditsDiv).append(creditFellowsEl);
-
-  $("#language-search").append(creditsDiv);
-  console.log("Legal requirements met");
-}
-
-function init() {
-  getPexelsImage("social network", "10");
-  showCredits();
-}
-
-$(document).ready(init());
-  
+$(document).ready( getPexelsImage("social network", "10") );
