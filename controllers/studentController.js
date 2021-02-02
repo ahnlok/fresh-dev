@@ -50,6 +50,7 @@ router.get("/students/new", (req, res) => {
   res.render("post");
 });
 
+// 
 /**
  * Route to pull student data from the database
  * Render the student data to a pre-populate form.
@@ -57,7 +58,20 @@ router.get("/students/new", (req, res) => {
 router.get("/students/:id/edit", (req, res) => {
   db.Student.findOne({ where: { id: req.params.id } })
     .then((singleStudent) => {
-      res.render("editStudent", singleStudent.dataValues);
+      const dataObject = {
+        ...singleStudent.dataValues,
+      options: [
+        {
+          display: "Connected",
+          selected: singleStudent.dataValues.status === "Connected",
+        },
+        {
+          display: "On Waiting List",
+          selected: singleStudent.dataValues.status === "On Waiting List",
+        },
+      ],
+      };
+      res.render("edit-post", dataObject);
     })
     .catch((err) => {
       console.log(err);
@@ -124,7 +138,7 @@ router.post("/api/students", (req, res) => {
 // });
 
 /**
- * API Route to update an existing student by ID
+ * Save Router
  */
 router.put("/api/students/:id", (req, res) => {
   
@@ -134,7 +148,7 @@ router.put("/api/students/:id", (req, res) => {
     where: {
       id: req.params.id,
     },
-  }).then( (result) => {
+  }).then((result) => {
       res.json(result);
     }).catch((err) => {
       console.log(err);
@@ -142,6 +156,23 @@ router.put("/api/students/:id", (req, res) => {
     });
 });
 
+// Edit Router (Update an existing student post by ID)
+router.put("/api/students/:id", (req, res) => {
+  if (postOptions.includes(req.body.description)) {
+    db.Student.update(req.body, {
+      where: {
+        id: req.params.id,
+      },
+    }).then((result) => {
+      res.json(result);
+    }).catch((err) => {
+      console.log(err);
+      res.status(404).end();
+    });
+  } else {
+    res.status(400).end();
+  }
+});
 /**
  * API Route to delete a student by ID
  */
