@@ -6,6 +6,15 @@ const db = require("../models");
 const router = express.Router();
 
 /**
+ * Route to render all students to a page.
+ */
+router.get("/", (req, res) => {
+
+      res.render("index");
+
+});
+
+/**
  * Route to render all students to a page. 
  */
 router.get("/students", (req, res) => {
@@ -49,7 +58,7 @@ router.get("/students/search/:term", (req, res) => {
         mainLanguage: req.params.term
       }
     }).then((allStudents) => {
-      res.render("saved", {
+      res.render("search", {
         students: allStudents
       });
     })
