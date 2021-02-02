@@ -25,8 +25,11 @@ router.get("/students", (req, res) => {
  * Route to render the saved pages route.
  */
 router.get("/students/saved", (req, res) => {
-  db.Student.findAll()
-    .then((allStudents) => {
+  db.Student.findAll({
+    where: {
+      savedState: true
+    }
+  }).then((allStudents) => {
       console.log(allStudents);
       res.render("saved", {
         students: allStudents
