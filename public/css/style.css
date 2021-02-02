@@ -1,15 +1,57 @@
+img {
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* To make html element fill screen */
+html,
+body {
+  height: 100%;
+}
+
+/* To make html element fill screen */
+html {
+  height: 100%;
+}
+
+/* To make html element fill screen */
+body {
+  min-height: 100%;
+  /* background-color: rgb(73, 73, 73); */
+}
+
+/* Adjust element opacity */
+header,
+nav {
+  opacity: 0.8;
+}
+
+.creditDiv {
+  font-family: "Quicksand";
+  font-size: large;
+  -webkit-text-stroke: 0.25px black;
+  color: white;
+}
+
+.creditLink {
+  -webkit-text-stroke: 0.25px black;
+  color: white;
+  text-decoration: none;
+}
+
 /* Navbar (For Everypage)
 nav {
     background-color:
 } */
 
-
 /* For POST (Sung) */
-.post-title{
-    font-weight: bold;
-    text-align: center;
+.post-title {
+  font-weight: bold;
+  text-align: center;
 }
-.post-require{
-    font-weight: bold;
-    text-align: center;
+.post-require {
+  font-weight: bold;
+  text-align: center;
 }
