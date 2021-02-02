@@ -6,8 +6,9 @@
 {{#each students }}
 <div class="container orange lighten-4">
     <div class="row">
-        <div class="col m6">
-            <h5>{{fullName}}</h5>
+        {{!-- <div class="col m6"> --}}
+            {{!-- <h5>{{firstName}}</h5>
+            <h5>{{lastName}}</h5>
             <h5>{{mainLanguage}}</h5>
             <h5>{{subLanguage}}</h5>
             <h5>{{school}}</h5>
@@ -16,19 +17,35 @@
             <h5>{{gitHub}}</h5>
             <h5>{{resume}}</h5>
             <h5>{{description}}</h5>
-        </div>
-        <div class="col m6">
-            <div class="row">
-                <div class="col m12 right-align">
-                    <button class="hoverable">Save</button>
+            --}}
+            <div class="card-panel hoverable">
+                <div class="card-image yellow lighten-3">
+                    <span class="card-title">
+                        <h1 class="studentName">{{firstName}} {{lastName}}</h1>
+                    </span>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col m12 right-align">
-                    <button class="hoverable">Delete</button>
+
+                <p class="mainLanguage">Main Language: {{mainLanguage}}</p>
+                <p class="subLanguage">Sub-Language: {{subLanguage}}</p>
+                <p class="school">School: {{school}}</p>
+                <p class="email">Email:{{email}}</p>
+                <p class="gitHub">GitHub: {{gitHub}}</p>
+                <p class="resume">Resume: {{resume}}</p>
+                <p class="description">Description: {{description}}</p>
+                <div class="row">
+                    <div class="col m12 right-align">
+                        <button class="hoverable">Edit</button>
+                    </div>
                 </div>
-            </div>
+                <div class="row">
+                    <div class="col m12 right-align">
+                        <button class="hoverable">Delete</button>
+                    </div>
+                </div>
         </div>
+        {{!-- </div> --}}
+        {{!-- <div class="col m6"> --}}
+        {{!-- </div> --}}
     </div>
 </div>
 {{/each}}
