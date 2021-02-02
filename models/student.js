@@ -14,6 +14,7 @@ module.exports = function(sequelize, DataTypes) {
         gitHub: DataTypes.STRING,
         resume: DataTypes.STRING,
         description: DataTypes.TEXT,
+        savedState: DataTypes.BOOLEAN,
     },
     {       // This is the options object
         timestamps: false,
