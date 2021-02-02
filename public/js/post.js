@@ -1,5 +1,6 @@
-
+console.log("Server's running")
 $(document).ready(function () {
+    console.log("inside document.ready")
     $("#new-post-form").on("submit", function (event) {
         event.preventDefault();
         console.log("You successfully post")
@@ -16,18 +17,21 @@ $(document).ready(function () {
             resume: $("resume").val(),
             description: $("description").val(),
         };
+        console.log(newPost);
         // Alert if those conditions are not met
-        if (
-            !newPost.first_name ||
-            !newPost.last_name ||
-            !newPost.email||
-            !newPost.school||
-            !newPost.main_language ||
-            !newPost.linkedIn ||
-            !newPost.gitHub 
-        ) {
-            alert("Please complete all the required fields!");
-        } else {
+        // if (
+        
+        //     !newPost.firstName ||
+        //     !newPost.lastName ||
+        //     !newPost.email ||
+        //     !newPost.school ||
+        //     !newPost.mainLanguage ||
+        //     !newPost.linkedIn ||
+        //     !newPost.gitHub 
+        // ) {
+        //     console.log(!newPost.firstName);
+        //     alert("Please complete all the required fields!");
+        // } else {
             $.ajax({
                 url: "/api/students",
                 method: "POST",
@@ -36,6 +40,6 @@ $(document).ready(function () {
                 console.log(response);
                 window.location.href = "/students";
             });
-        }
+        // }
     });
 });

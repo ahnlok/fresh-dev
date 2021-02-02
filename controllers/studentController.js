@@ -81,17 +81,43 @@ router.get("/students/:id", (req, res) => {
 /**
  * API Route to create a new student.
  */
-router.post("/api/students", (req, res) => {
-  console.log(req.body);
-  
-  db.Student.create(req.body)
-    .then((createdStudent) => {
-      res.json(createdStudent);
-    })
-    .catch((err) => {
-      console.log(err);
-      res.status(500).end();
-    });
+// router.post("/api/students", (req, res) => {
+//   db.Student.create(req.body)
+//     .then((createdStudent) => {
+//       res.json(createdStudent);
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//       res.status(500).end();
+//     });
+// });
+router.post("/api/students", function(req, res) {
+  db.Student.create([
+    "firstName", 
+    "lastName",
+    "email",
+    "school",
+    "mainLanguage",
+    "secondaryLanguage",
+    "linkedIn",
+    "gitHub",
+    "resume",
+    "description",
+  ], [
+    req.body.firstName, 
+    req.body.lastName,
+    req.body.email,
+    req.body.school,
+    req.body.mainLanguage,
+    req.body.secondaryLanguage,
+    req.body.linkedIn,
+    req.body.gitHub,
+    req.body.resume,
+    req.body.description,
+  ], function(result) {
+    // Send back the ID of the new quote
+    res.json({ id: result.insertId });
+  });
 });
 
 /**

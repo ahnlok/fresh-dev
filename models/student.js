@@ -8,6 +8,7 @@ module.exports = function(sequelize, DataTypes) {
         subLanguage: DataTypes.STRING,
         school: DataTypes.STRING,
         email: DataTypes.STRING,
+        school: DataTypes.STRING,
         linkedIn: DataTypes.STRING,
         gitHub: DataTypes.STRING,
         resume: DataTypes.STRING,

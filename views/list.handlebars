@@ -1,12 +1,27 @@
 {{> navbar}}
-<h1>All Students</h1>
-{{#each students}}
-<h1 class="fullName">{{fullName}}</h1>
-<p class="mainLanguage">{{mainLanguage}}</p>
-<p class="subLanguage">{{subLanguage}}</p>
-<p class="school">{{school}}</p>
-<p class="email">{{email}}</p>
-<p class="gitHub">{{gitHub}}</p>
-<p class="resume">{{resume}}</p>
-<p class="description">{{description}}</p>
-{{/each}}
+<div class="container">
+    <div class="row">
+        <h2 class="center-align">All Students</h2>
+    </div>
+    {{#each students}}
+        <div class="row">
+            
+                <div class="card-panel hoverable">
+                    <div class="card-image yellow lighten-3">
+                        <span class="card-title"><h1 class="fullName">{{fullName}}</h1></span>
+                    </div>
+                    
+                    <p class="mainLanguage">Main Language: {{mainLanguage}}</p>
+                    <p class="subLanguage">Sub-Language: {{subLanguage}}</p>
+                    <p class="school">School: {{school}}</p>
+                    <p class="email">Email:{{email}}</p>
+                    <p class="gitHub">GitHub: {{gitHub}}</p>
+                    <p class="resume">Resume: {{resume}}</p>
+                    <p class="description">Description: {{description}}</p>
+                </div>
+            
+        </div>
+    {{/each}}    
+</div>
+
+>>>>>>> main
