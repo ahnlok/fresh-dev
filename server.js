@@ -2,8 +2,6 @@
 const express = require("express");
 const session = require("express-session");
 
-// Requiring passport as we've configured it
-const passport = require("./config/passport");
 const exphbs = require("express-handlebars");
 const handlebars = require("handlebars");
 const {
@@ -13,7 +11,6 @@ const app = express();
 const db = require("./models");
 
 const StudentController = require("./controllers/studentController");
-const LanguageController= require("./controllers/languageController");
 
 // Setting up port
 const PORT = process.env.PORT || 8080;
@@ -22,9 +19,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(__dirname + "/public"));
 
-app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true}));
-app.use(passport.initialize());
-app.use(passport.session());
+// app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true}));
 
 app.engine(
   "handlebars",
@@ -43,7 +38,6 @@ app.get("/api/config", (req, res) => {
 
 // our routes
 app.use(StudentController);
-app.use(LanguageController);
 
 // Syncing our database and logging a message to the user upon success
 db.sequelize
