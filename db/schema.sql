@@ -22,6 +22,7 @@ CREATE TABLE students (
     gitHub VARCHAR(100) NOT NULL,
     resume VARCHAR(100) NOT NULL,
     description TEXT,
+    savedState BOOLEAN DEFAULT false,
     PRIMARY KEY (id)
 );
 

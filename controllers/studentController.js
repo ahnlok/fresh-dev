@@ -25,8 +25,11 @@ router.get("/students", (req, res) => {
  * Route to render the saved pages route.
  */
 router.get("/students/saved", (req, res) => {
-  db.Student.findAll()
-    .then((allStudents) => {
+  db.Student.findAll({
+    where: {
+      savedState: true
+    }
+  }).then((allStudents) => {
       console.log(allStudents);
       res.render("saved", {
         students: allStudents
@@ -124,15 +127,16 @@ router.post("/api/students", (req, res) => {
  * API Route to update an existing student by ID
  */
 router.put("/api/students/:id", (req, res) => {
-  db.Student.update(req.body, {
+  
+  console.log(req.params.id);
+
+  db.Student.update({savedState: true},{
     where: {
       id: req.params.id,
     },
-  })
-    .then((result) => {
+  }).then( (result) => {
       res.json(result);
-    })
-    .catch((err) => {
+    }).catch((err) => {
       console.log(err);
       res.status(404).end();
     });
