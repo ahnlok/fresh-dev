@@ -38,7 +38,7 @@ $(document).ready(function () {
                 data: newPost,
             }).then((response) => {
                 console.log(response);
-                window.location.href = "/list";
+                window.location.href = "/students";
             });
         // }
     });
