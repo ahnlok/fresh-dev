@@ -20,7 +20,7 @@
                     <p class="description">Description: {{description}}</p>
                     <div class="row">
                         <div class="col m12 right-align">
-                            <a class="btn halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                            <a class="saveButton btn halfway-fab waves-effect waves-light red" data-id="{{id}}" data-newsave="{{savedState}}"><i class="material-icons">add</i></a>
                         </div>
                     </div>
                     
@@ -29,3 +29,5 @@
         </div>
     {{/each}}    
 </div>
+
+<script type="text/javascript" src="/js/list.js"></script>
