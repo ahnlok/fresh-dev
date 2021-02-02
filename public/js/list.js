@@ -19,7 +19,7 @@ $(function() {
       alert('The student post is saved on the saved page');
 
       // Send the PUT request.
-      $.ajax("/api/students/" + id, {
+      $.ajax("/api/students/save/" + id, {
         type: "PUT",
         data: newSaveState
       }).then(
