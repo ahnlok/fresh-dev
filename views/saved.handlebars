@@ -34,7 +34,7 @@
                 <p class="description">Description: {{description}}</p>
                 <div class="row">
                     <div class="col m12 right-align">
-                        <button class="hoverable">Edit</button>
+                        <button id = "edit-btn" data-id="{{id}}" data-newedit="{{editState}}"  class="hoverable">Edit</button>
                     </div>
                 </div>
                 <div class="row">
@@ -49,3 +49,5 @@
     </div>
 </div>
 {{/each}}
+
+<script type="text/javascript" src="/js/edit.js"></script>

@@ -14,6 +14,7 @@ const app = express();
 const db = require("./models");
 
 const StudentController = require("./controllers/studentController");
+const LanguageController= require("./controllers/languageController");
 
 // Setting up port
 const PORT = process.env.PORT || 8080;
@@ -48,9 +49,9 @@ app.engine(
 );
 app.set("view engine", "handlebars");
 
-app.get("/", (req, res) => {
-  res.render("index");
-});
+// app.get("/", (req, res) => {
+//   res.render("index");
+// });
 
 app.get("/api/config", (req, res) => {
   res.json({
@@ -60,6 +61,7 @@ app.get("/api/config", (req, res) => {
 
 // our routes
 app.use(StudentController);
+app.use(LanguageController);
 
 // post - Sung
 // app.post("/api/language", function (req, res) {
