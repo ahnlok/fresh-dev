@@ -4,59 +4,18 @@
     <div class="row">
 
         <div class="row">
-            {{!-- <div class="col s4">
-                <p>
-                    <label>
-                        <input id="indeterminate-checkbox" type="checkbox" />
-                        <span>JavaScript</span>
-                    </label>
-                </p>
-            </div>
-            <div class="col s4">
-                <p>
-                    <label>
-                        <input id="indeterminate-checkbox" type="checkbox" />
-                        <span>Python</span>
-                    </label>
-                </p>
-            </div>
-            <div class="col s4">
-                <p>
-                    <label>
-                        <input id="indeterminate-checkbox" type="checkbox" />
-                        <span>React</span>
-                    </label>
-                </p>
-            </div>
 
-            <div class="col s4">
-                <p>
-                    <label>
-                        <input id="indeterminate-checkbox" type="checkbox" />
-                        <span>React</span>
-                    </label>
-                </p>
-            </div> --}}
-            {{!-- {{#each languages}}
-            <div class="col s4">
-                <p>
-                    <input id="indeterminate-checkbox" type="checkbox" />
-                    <input type="hidden" value={{id}} id="language-id" />
-                    <span>{{language}}</span>
-                </p>
+            <div class="input-field col s12">
+                <h1>Search a Programming Language:</h1>
+                <input id="language-search" type="text" placeholder="python, javascript, react, etc.">
+                <button id="search-btn" data-id="{{id}}" data-newsearch="{{searchState}}"
+                    class="hoverable">Search</button>
             </div>
-            {{/each}} --}}
-
-                <div class="input-field col s12">
-                    <h1>Choose One Main Programming Language To Search:</h1>
-                    <input id="language-search" type="text" placeholder="python, javascript, react, etc.">
-                     <button id = "search-btn" data-id="{{id}}" data-newsearch="{{searchState}}"  class="hoverable">Search</button>
-                </div>
-
-            </div>
-
 
         </div>
+
+
     </div>
+</div>
 </div>
 <script type="text/javascript" src="/js/index.js"></script>
