@@ -176,8 +176,8 @@ router.put("/api/students/:id", (req, res) => {
 /**
  * API Route to delete a student by ID
  */
-router.delete("/api/students/save/:id", (req, res) => {
-  db.Student.delete({
+router.delete("/api/students/delete/:id", (req, res) => {
+  db.Student.destroy({
     where: {
       id: req.params.id,
     },
