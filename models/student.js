@@ -1,7 +1,6 @@
 // Student.js
 
-module.exports = function(sequelize, DataTypes) {
-    // variablename.define(modelname:string, attrib:obj, options:obj)
+module.exports = function (sequelize, DataTypes) {
     var Student = sequelize.define("Student", {
         firstName: DataTypes.STRING,
         lastName: DataTypes.STRING,
@@ -15,18 +14,17 @@ module.exports = function(sequelize, DataTypes) {
         resume: DataTypes.STRING,
         description: DataTypes.TEXT,
         savedState: DataTypes.BOOLEAN,
-    },
-    {       // This is the options object
+    }, { // This is the options object
         timestamps: false,
     });
 
-    Student.associate = function(models) {
+    Student.associate = function (models) {
         Student.belongsToMany(models.Language, {
             through: "StudentLanguage",
             foreignKey: "student_id",
             onDelete: "cascade"
         });
     };
-    
+
     return Student;
 };

@@ -7,7 +7,6 @@ $(function() {
       var newSave = $(this).data("newsave");
   
 
-
       var newSaveState = {
         savedState: newSave
       };

@@ -1,11 +1,12 @@
 {{> navbar}}
-
-<h1 class="center-align">Saved Posts</h1>
-
-{{#each students }}
-<div class="container orange lighten-4">
+<div class="container">
     <div class="row">
-        <div class="card-panel hoverable">
+        <h2 class="center-align">Searched Results</h2>
+    </div>
+    {{#each students}}
+    <div class="row">
+
+        <div class="card-panel hoverable" id="search-section">
             <div class="card-image yellow lighten-3">
                 <span class="card-title">
                     <h1 class="studentName">{{firstName}} {{lastName}}</h1>
@@ -22,18 +23,15 @@
             <p class="description">Description: {{description}}</p>
             <div class="row">
                 <div class="col m12 right-align">
-                    <button id="edit-btn" data-id="{{id}}" data-newedit="{{editState}}" class="hoverable">Edit</button>
+                    <a class="saveButton btn halfway-fab waves-effect waves-light red" data-id="{{id}}"
+                        data-newsave="{{savedState}}"><i class="material-icons">add</i></a>
                 </div>
             </div>
-            <div class="row">
-                <div class="col m12 right-align">
-                    <button id="delete-btn" data-id="{{id}}" data-delete="{{deleteState}}"
-                        class="hoverable">Delete</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-{{/each}}
 
-<script type="text/javascript" src="/js/edit.js"></script>
+        </div>
+
+    </div>
+    {{/each}}
+</div>
+
+<script type="text/javascript" src="/js/list.js"></script>
