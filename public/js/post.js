@@ -18,20 +18,7 @@ $(document).ready(function () {
             description: $("#description").val(),
         };
         console.log(newPost);
-        // Alert if those conditions are not met
-        // if (
         
-        //     !newPost.firstName ||
-        //     !newPost.lastName ||
-        //     !newPost.email ||
-        //     !newPost.school ||
-        //     !newPost.mainLanguage ||
-        //     !newPost.linkedIn ||
-        //     !newPost.gitHub 
-        // ) {
-        //     console.log(!newPost.firstName);
-        //     alert("Please complete all the required fields!");
-        // } else {
             alert("You Successfully Posted Your Form!");
 
             $.ajax({
