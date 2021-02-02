@@ -1,3 +1,5 @@
+// Edit button
+
 $(function() {
     $("#edit-btn").on("click", function(event) {
       event.preventDefault();
@@ -30,6 +32,8 @@ $(function() {
     });
   
   });
+
+  //Post function
 console.log("Server's running")
 $(document).ready(function () {
     console.log("inside document.ready")
@@ -65,3 +69,37 @@ $(document).ready(function () {
         });
     });
 });
+
+// Delete button 
+
+    $("#delete-btn").on("click", function (event) {
+        event.preventDefault();
+        console.log("You successfully delete")
+        // const newPost =
+        // {
+        //     firstName: $("#firstName").val(),
+        //     lastName: $("#lastName").val(),
+        //     email: $("#email").val(),
+        //     school: $("#school").val(),
+        //     mainLanguage: $("#mainLanguage").val(),
+        //     subLanguage: $("#subLanguage").val(),
+        //     linkedIn: $("#linkedIn").val(),
+        //     gitHub: $("#gitHub").val(),
+        //     resume: $("#resume").val(),
+        //     description: $("#description").val(),
+        // };
+        // console.log(newPost);
+
+        var id = $(this).attr("data-id");
+        // var newDelete = $(this.data("delete"));
+        // console.log(newDelete);
+        // var newDeleteState = {deleteState: id};
+        $.ajax({
+            url: `/api/students/delete/${id}`,
+            method: "DELETE",
+            // data: id,
+        }).then((response) => {
+            console.log(response);
+            location.reload();
+        });
+    });
