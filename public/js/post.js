@@ -6,16 +6,16 @@ $(document).ready(function () {
         console.log("You successfully post")
         const newPost =
         {
-            firstName: $("#first_name").val(),
-            lastName: $("#last_name").val(),
+            firstName: $("#firstName").val(),
+            lastName: $("#lastName").val(),
             email: $("#email").val(),
             school: $("#school").val(),
-            mainLanguage: $("#main_language").val(),
-            secondaryLanguage: $("#secondary_language").val(),
+            mainLanguage: $("#mainLanguage").val(),
+            subLanguage: $("#subLanguage").val(),
             linkedIn: $("#linkedIn").val(),
-            gitHub: $("gitHub").val(),
-            resume: $("resume").val(),
-            description: $("description").val(),
+            gitHub: $("#gitHub").val(),
+            resume: $("#resume").val(),
+            description: $("#description").val(),
         };
         console.log(newPost);
         // Alert if those conditions are not met

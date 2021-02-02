@@ -3,7 +3,8 @@
 module.exports = function(sequelize, DataTypes) {
     // variablename.define(modelname:string, attrib:obj, options:obj)
     var Student = sequelize.define("Student", {
-        fullName: DataTypes.STRING,
+        firstName: DataTypes.STRING,
+        lastName: DataTypes.STRING,
         mainLanguage: DataTypes.STRING,
         subLanguage: DataTypes.STRING,
         school: DataTypes.STRING,
