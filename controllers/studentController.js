@@ -30,7 +30,6 @@ router.get("/students/saved", (req, res) => {
       savedState: true
     }
   }).then((allStudents) => {
-      console.log(allStudents);
       res.render("saved", {
         students: allStudents
       });
@@ -140,7 +139,7 @@ router.post("/api/students", (req, res) => {
 /**
  * Save Router
  */
-router.put("/api/students/:id", (req, res) => {
+router.put("/api/students/save/:id", (req, res) => {
   
   console.log(req.params.id);
 
@@ -158,7 +157,9 @@ router.put("/api/students/:id", (req, res) => {
 
 // Edit Router (Update an existing student post by ID)
 router.put("/api/students/:id", (req, res) => {
-  if (postOptions.includes(req.body.description)) {
+    console.log(req.params.id);
+    console.log(req.body);
+//   if (postOptions.includes(req.body.description)) {
     db.Student.update(req.body, {
       where: {
         id: req.params.id,
@@ -169,9 +170,9 @@ router.put("/api/students/:id", (req, res) => {
       console.log(err);
       res.status(404).end();
     });
-  } else {
-    res.status(400).end();
-  }
+//   } else {
+    // res.status(400).end();
+//   }
 });
 /**
  * API Route to delete a student by ID
