@@ -12,7 +12,8 @@ CREATE TABLE languages (
 
 CREATE TABLE students (
 	id INTEGER NOT NULL AUTO_INCREMENT,
-    fullName VARCHAR(100) NOT NULL,
+    firstName VARCHAR(100) NOT NULL,
+    lastName VARCHAR(100) NOT NULL,
     mainLanguage VARCHAR(100),
     subLanguage VARCHAR(100),
     school VARCHAR(100),

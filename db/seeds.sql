@@ -1,8 +1,9 @@
 INSERT INTO students
-(fullName, mainLanguage, subLanguage, school, email, linkedIn, gitHub, resume, description)
+(firstName, lastName, mainLanguage, subLanguage, school, email, linkedIn, gitHub, resume, description)
 VALUES
 (
-    "Alice Baker",
+    "Alice",
+    "Baker",
     "Javascript",
     "Python,",
     "GT-FT",
@@ -13,7 +14,8 @@ VALUES
     "Alice is here to learn some things."
 ),
 (
-    "Charlie Donner",
+    "Charlie",
+    "Donner",
     "Javascript",
     "Python",
     "GT-FT",
@@ -24,7 +26,8 @@ VALUES
     "Charlie is here to learn some things."
 ),
 (
-    "Elsa Foxtrot",
+    "Elsa",
+    "Foxtrot",
     "Javascript",
     "Python",
     "GT-FT",
@@ -35,7 +38,8 @@ VALUES
     "Elsa is here to learn some things."
 ),
 (
-    "George Halfthor",
+    "George",
+    "Halfthor",
     "Javascript",
     "Python",
     "GT-FT",
@@ -46,7 +50,8 @@ VALUES
     "George is here to learn greater than zero things."
 ),
 (
-    "Ingrid Jones",
+    "Ingrid",
+    "Jones",
     "Javascript",
     "Python",
     "GT-FT",
