@@ -1,8 +1,17 @@
+/* Fonts */
+/* Fredericak the Great */
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+/* Titan One */
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Titan+One&display=swap');
+/* Bungee Inline */
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
+
 img {
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  opacity: 0.5;
 }
 
 /* To make html element fill screen */
@@ -26,6 +35,7 @@ body {
 header,
 nav {
   opacity: 0.8;
+  background-color: #F08080;
 }
 
 .creditDiv {
@@ -41,17 +51,67 @@ nav {
   text-decoration: none;
 }
 
-/* Navbar (For Everypage)
-nav {
-    background-color:
-} */
+/* Navbar */
+.brand-logo {
+  color: ivory;
+  font-weight: 500;
+  margin-left: 10px;
+  font-family: 'Titan One', cursive;
+}
 
+.nav-tag {
+  color: ivory;
+  font-weight: 500;
+  font-family: 'Titan One', cursive;
+}
+
+/* Search */
+.search-tag {
+  color:#F08080;
+  font-weight: 600;
+  font-family: 'Bungee Inline', cursive;
+  -webkit-text-stroke: 0.5 black;
+  font-size: 50px;
+}
+.search-label {
+  color: black;
+  font-weight: 300;
+  font-size: 20px;
+
+}
 /* For POST (Sung) */
 .post-title {
   font-weight: bold;
   text-align: center;
 }
+
 .post-require {
   font-weight: bold;
   text-align: center;
+}
+
+/* footer */
+.footer-copyright {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #F08080;
+  font-weight: 700;
+  color: white;
+}
+
+.footer-post {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #F08080;
+  font-weight: 700;
+  color: white;
+}
+
+.search-section {
+  background-color: rgba(73, 73, 73, 0.25);
+
 }
