@@ -32,6 +32,8 @@ $(document).ready(function () {
         //     console.log(!newPost.firstName);
         //     alert("Please complete all the required fields!");
         // } else {
+            alert("You Successfully Posted Your Form!");
+
             $.ajax({
                 url: "/api/students",
                 method: "POST",
