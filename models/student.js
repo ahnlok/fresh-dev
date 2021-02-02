@@ -24,6 +24,7 @@ module.exports = function(sequelize, DataTypes) {
         Student.belongsToMany(models.Language, {
             through: "StudentLanguage",
             foreignKey: "student_id",
+            onDelete: "cascade"
         });
     };
     
