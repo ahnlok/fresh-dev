@@ -1,7 +1,39 @@
+$(function() {
+    $("#edit-btn").on("click", function(event) {
+      event.preventDefault();
+
+      var id = $(this).data("id");
+      var newEdit = $(this).data("newedit");
+  console.log(newEdit);
+
+
+      var newEditState = {
+        editState: id
+      };
+  
+      console.log(`id: ${id}`);
+      console.log(`newEdit: ${newEdit}`);
+      console.log(`newEditState: ${newEditState}`);
+      
+      alert('Redict to edit page');
+      window.location.href = "/students/" + id + "/edit"; 
+      // Send the PUT request.
+    //   $.ajax("/students/" + id + "/edit", {
+    //     type: "GET",
+    //     data: newEditState
+    //   }).then(
+    //     function() {
+    //       console.log("redirect to ", newEdit);
+    //       window.location.href = "/students/";
+    //     }
+    //   );
+    });
+  
+  });
 console.log("Server's running")
 $(document).ready(function () {
     console.log("inside document.ready")
-    $("#new-post-form").on("submit", function (event) {
+    $("#edit-student-form").on("submit", function (event) {
         event.preventDefault();
         console.log("You successfully post")
         const newPost =
