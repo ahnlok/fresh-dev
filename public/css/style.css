@@ -170,7 +170,7 @@ p {
   color: white;
 }
 /* Edit Button */
-#edit-btn {
+.edit-btn {
   display: inline-block;
   color: white;
   font-family: "Titan One";
@@ -184,13 +184,13 @@ p {
   height: 40px;
   padding: 0;
 }
-#edit-btn:hover {
+.edit-btn:hover {
   background-image: none !important;
   background: lightblue !important;
   color: white;
 }
 /* Delete Button */
-#delete-btn {
+.delete-btn {
   display: inline-block;
   color: white;
   font-family: "Titan One";
@@ -204,7 +204,7 @@ p {
   height: 40px;
   padding: 0;
 }
-#delete-btn:hover {
+.delete-btn:hover {
   background-image: none !important;
   background: lightblue !important;
   color: white;

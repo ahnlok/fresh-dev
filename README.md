@@ -43,7 +43,7 @@
 
 ![Final-post-page](./public/img/final-post-page.png)
 
-![Final-saved-page](./public/img/final-saved-page.png)
+![Final-saved-page](./public/img/saved-post-page.png)
 
 ![Final-list-page](./public/img/final-list-page.png)
 
