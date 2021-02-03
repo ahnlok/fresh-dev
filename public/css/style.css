@@ -7,6 +7,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
 /* Jomhuria */
 @import url('https://fonts.googleapis.com/css2?family=Jomhuria&display=swap');
+/* Anton */
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
 img {
   height: 100%;
@@ -40,6 +42,11 @@ nav {
   background-color: #F08080;
 }
 
+p {
+  font-weight: 500;
+  font-family: 'Anton';
+  font-size: 15px;
+}
 .creditDiv {
   font-family: "Quicksand";
   font-size: large;
@@ -125,7 +132,50 @@ nav {
   color: white;
 }
 
-
+/* savebutton */
+.saveButton {
+  border-radius: 50%;
+}
+/* Edit Button */
+#edit-btn {
+  display: inline-block;
+  color: white;
+  font-family: 'Titan One';
+  font-size: 25px;
+  font-weight: 400;
+  text-align: center;
+  background: green;
+  border-radius: 8px;
+  border: green;
+  width: 15%;
+  height: 40px;;
+  padding: 0;
+}
+#edit-btn:hover {
+  background-image: none !important;
+  background: lightblue !important;
+  color: white;
+}
+/* Delete Button */
+#delete-btn{
+  display: inline-block;
+  color: white;
+  font-family: 'Titan One';
+  font-size: 25px;
+  font-weight: 400;
+  text-align: center;
+  background: red;
+  border-radius: 8px;
+  border: red;
+  width: 15%;
+  height: 40px;;
+  padding: 0;
+}
+#delete-btn:hover {
+  background-image: none !important;
+  background: lightblue !important;
+  color: white;
+}
 /* Header */
 #post-header {
   text-align: center;
@@ -133,6 +183,8 @@ nav {
   font-family: 'Bungee Inline';
   color: #F08080;
 }
+
+
 /* footer */
 .footer-copyright {
   position: fixed;

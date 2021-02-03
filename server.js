@@ -41,7 +41,7 @@ app.use(StudentController);
 
 // Syncing our database and logging a message to the user upon success
 db.sequelize
-  .sync({force: true})
+  .sync()
   .then(() => {
     app.listen(PORT, () => {
       console.log(`Server is running on http://localhost:${PORT}`);
