@@ -11,11 +11,11 @@ $(function() {
         savedState: newSave
       };
   
-      console.log(`id: ${id}`);
-      console.log(`newSave: ${newSave}`);
-      console.log(`newSaveState: ${newSaveState}`);
+      // console.log(`id: ${id}`);
+      // console.log(`newSave: ${newSave}`);
+      // console.log(`newSaveState: ${newSaveState}`);
       
-      alert('The student post is saved on the saved page');
+      // alert('The student post is saved on the saved page');
 
       // Send the PUT request.
       $.ajax("/api/students/save/" + id, {
@@ -23,7 +23,7 @@ $(function() {
         data: newSaveState
       }).then(
         function() {
-          console.log("changed saved to", newSave);
+          // console.log("changed saved to", newSave);
           location.reload();
         }
       );
