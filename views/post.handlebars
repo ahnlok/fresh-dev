@@ -2,14 +2,14 @@
 
 {{!-- POST Form--}}
 
-<h1 class="post-title center-align"> New Student Post </h1>
+<h2 class="post-title center-align" id="post-header"> New Student Post </h2>
 <div class="container">
     <div class="row">
         <form class="col s12" id="new-post-form">
             {{> student-form}}
 
             {{!-- Submit Button --}}
-            <button class="btn waves-effect waves-light" type="submit" name="action">Submit Your Post
+            <button class="btn" id="rest-btn" type="submit" name="action">Submit Your Post
                 <i class="material-icons right">send</i>
             </button>
         </form>
