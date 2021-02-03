@@ -16,7 +16,7 @@ $(function () {
         console.log(`newEdit: ${newEdit}`);
         console.log(`newEditState: ${newEditState}`);
 
-        alert('Redict to edit page');
+        alert('Redirect to the edit page');
         window.location.href = "/students/" + id + "/edit";
     });
 

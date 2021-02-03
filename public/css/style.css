@@ -9,6 +9,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Jomhuria&display=swap');
 /* Anton */
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+/* Russon One */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Russo+One&display=swap');
 
 img {
   height: 100%;
@@ -43,9 +45,9 @@ nav {
 }
 
 p {
-  font-weight: 500;
-  font-family: 'Anton';
-  font-size: 15px;
+  font-weight: 600;
+  font-family: 'Russo One';
+  font-size: 20px;
 }
 .creditDiv {
   font-family: "Quicksand";
