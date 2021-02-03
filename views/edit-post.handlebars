@@ -1,11 +1,13 @@
 {{> navbar}}
 <h2 class="center-align" id="post-header">Student Post Edit Page</h2>
 <div class="container" id="main-container">
+
     <div class="row">   
         <form class="col s12 edit-student-form">
+
             {{> student-form}}
             <input type="hidden" value={{id}} id="student-id" />
-            <button type = "submit" id="rest-btn" class="btn">Update Post</button>
+            <button type="submit" id="rest-btn" class="btn">Update Post</button>
         </form>
     </div>
 </div>

@@ -1,6 +1,7 @@
 // Edit button
 
 $(function () {
+
     $(".edit-btn").on("click", function (event) {
         event.preventDefault();
 
@@ -20,11 +21,16 @@ $(function () {
         window.location.href = "/students/" + id + "/edit";
     });
 
+
+    var id = $(this).data("id");
+    window.location.href = "/students/" + id + "/edit";
+  });
 });
 
 //Post function
-console.log("Server's running")
+console.log("Server's running");
 $(document).ready(function () {
+
     // console.log("inside document.ready")
     $(".edit-student-form").on("submit", function (event) {
         event.preventDefault();
@@ -47,18 +53,19 @@ $(document).ready(function () {
 
         // alert("Successfully Edited The Post!");
 
-        $.ajax({
-            url: `/api/students/${id}`,
-            method: "PUT",
-            data: newPost,
-        }).then((response) => {
-            // console.log(response);
-            window.location.href = "/students/saved";
-        });
+
+    $.ajax({
+      url: `/api/students/${id}`,
+      method: "PUT",
+      data: newPost,
+    }).then((response) => {
+      window.location.href = "/students/saved";
     });
+  });
 });
 
 // Delete button
+
 $(".delete-btn").on("click", function (event) {
     event.preventDefault();
     // console.log("You successfully delete")
@@ -72,3 +79,4 @@ $(".delete-btn").on("click", function (event) {
         location.reload();
     });
 });
+

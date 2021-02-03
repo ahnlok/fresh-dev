@@ -9,19 +9,17 @@ const router = express.Router();
  * Route to render all students to a page.
  */
 router.get("/", (req, res) => {
-
-      res.render("index");
-
+  res.render("index");
 });
 
 /**
- * Route to render all students to a page. 
+ * Route to render all students to a page.
  */
 router.get("/students", (req, res) => {
   db.Student.findAll()
     .then((allStudents) => {
       res.render("list", {
-        students: allStudents
+        students: allStudents,
       });
     })
     .catch((err) => {
@@ -35,12 +33,13 @@ router.get("/students", (req, res) => {
  */
 router.get("/students/saved", (req, res) => {
   db.Student.findAll({
-      where: {
-        savedState: true
-      }
-    }).then((allStudents) => {
+    where: {
+      savedState: true,
+    },
+  })
+    .then((allStudents) => {
       res.render("saved", {
-        students: allStudents
+        students: allStudents,
       });
     })
     .catch((err) => {
@@ -54,12 +53,13 @@ router.get("/students/saved", (req, res) => {
  */
 router.get("/students/search/:term", (req, res) => {
   db.Student.findAll({
-      where: {
-        mainLanguage: req.params.term
-      }
-    }).then((allStudents) => {
+    where: {
+      mainLanguage: req.params.term,
+    },
+  })
+    .then((allStudents) => {
       res.render("search", {
-        students: allStudents
+        students: allStudents,
       });
     })
     .catch((err) => {
@@ -81,14 +81,15 @@ router.get("/students/new", (req, res) => {
  */
 router.get("/students/:id/edit", (req, res) => {
   db.Student.findOne({
-      where: {
-        id: req.params.id
-      }
-    })
+    where: {
+      id: req.params.id,
+    },
+  })
     .then((singleStudent) => {
       const dataObject = {
         ...singleStudent.dataValues,
-        options: [{
+        options: [
+          {
             display: "Connected",
             selected: singleStudent.dataValues.status === "Connected",
           },
@@ -111,10 +112,10 @@ router.get("/students/:id/edit", (req, res) => {
  */
 router.get("/students/:id", (req, res) => {
   db.Student.findOne({
-      where: {
-        id: req.params.id
-      },
-    })
+    where: {
+      id: req.params.id,
+    },
+  })
     .then((singleStudent) => {
       res.render("singleStudent", singleStudent.dataValues);
     })
@@ -141,21 +142,25 @@ router.post("/api/students", (req, res) => {
  * Save Router
  */
 router.put("/api/students/save/:id", (req, res) => {
-
   console.log(req.params.id);
 
-  db.Student.update({
-    savedState: true
-  }, {
-    where: {
-      id: req.params.id,
+  db.Student.update(
+    {
+      savedState: true,
     },
-  }).then((result) => {
-    res.json(result);
-  }).catch((err) => {
-    console.log(err);
-    res.status(404).end();
-  });
+    {
+      where: {
+        id: req.params.id,
+      },
+    }
+  )
+    .then((result) => {
+      res.json(result);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(404).end();
+    });
 });
 
 // Edit Router (Update an existing student post by ID)
@@ -166,12 +171,14 @@ router.put("/api/students/:id", (req, res) => {
     where: {
       id: req.params.id,
     },
-  }).then((result) => {
-    res.json(result);
-  }).catch((err) => {
-    console.log(err);
-    res.status(404).end();
-  });
+  })
+    .then((result) => {
+      res.json(result);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(404).end();
+    });
 });
 
 /**
@@ -179,10 +186,10 @@ router.put("/api/students/:id", (req, res) => {
  */
 router.delete("/api/students/delete/:id", (req, res) => {
   db.Student.destroy({
-      where: {
-        id: req.params.id,
-      },
-    })
+    where: {
+      id: req.params.id,
+    },
+  })
     .then((result) => {
       res.json(result);
     })
