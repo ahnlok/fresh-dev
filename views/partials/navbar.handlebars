@@ -1,10 +1,32 @@
-<nav>
-    <div class="nav-wrapper">
-        <a href="/"  <i class="brand-logo">FreshDev</i></a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="/students/new" class="nav-tag">POST</a></li>
-            <li><a href="/students/saved" class="nav-tag">SAVED</a></li>
-            <li><a href="/students" class="nav-tag">LIST</a></li>
+{{!-- NavBar for all pages --}}
+<nav class="nav-wrapper">
+    <div class="container">
+        <a href="/" class="brand-logo">FreshDev</a>
+        <a href="#" class="sidenav-trigger" data-target="mobile-links">
+            <i class="material-icons">menu</i>
+        </a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="/students/new">POST</a></li>
+            <li><a href="/students/saved">VIEW SAVED</a></li>
+            <li><a href="/students">LIST</a></li>
         </ul>
     </div>
 </nav>
+
+<ul class="sidenav" id="mobile-links">
+    <li><a href="/students/new">POST</a></li>
+    <li><a href="/students/saved">VIEW SAVED</a></li>
+    <li><a href="/students">LIST</a></li>
+</ul>
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $(".sidenav").sidenav();
+    });
+</script>
