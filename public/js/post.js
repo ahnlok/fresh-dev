@@ -3,7 +3,7 @@ $(document).ready(function () {
     
     $("#new-post-form").on("submit", function (event) {
         event.preventDefault();
-        console.log("You successfully post")
+        // console.log("You successfully post")
         const newPost =
         {
             firstName: $("#firstName").val(),
@@ -17,18 +17,17 @@ $(document).ready(function () {
             resume: $("#resume").val(),
             description: $("#description").val(),
         };
-        console.log(newPost);
+        // console.log(newPost);
         
-            alert("You Successfully Posted Your Form!");
+            // alert("You Successfully Posted Your Form!");
 
             $.ajax({
                 url: "/api/students",
                 method: "POST",
                 data: newPost,
             }).then((response) => {
-                console.log(response);
+                // console.log(response);
                 window.location.href = "/students";
             });
-        // }
     });
 });
