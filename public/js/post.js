@@ -1,6 +1,6 @@
-console.log("Server's running")
+
 $(document).ready(function () {
-    console.log("inside document.ready")
+    
     $("#new-post-form").on("submit", function (event) {
         event.preventDefault();
         console.log("You successfully post")
