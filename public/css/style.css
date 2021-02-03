@@ -151,7 +151,23 @@ p {
 
 /* savebutton */
 .saveButton {
-  border-radius: 50%;
+  display: inline-block;
+  color: white;
+  font-family: 'Titan One';
+  font-size: 25px;
+  font-weight: 400;
+  text-align: center;
+  background: #F08080;
+  border-radius: 8px;
+  border: #F08080;
+  width: 15%;
+  height: 40px;;
+  padding: 0;
+}
+.saveButton:hover {
+  background-image: none !important;
+  background: lightblue !important;
+  color: white;
 }
 /* Edit Button */
 #edit-btn {
