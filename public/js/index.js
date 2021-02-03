@@ -6,8 +6,6 @@ $("#search-btn").on("click", function () {
   window.location.href = "/students/search/" + searchedLanguage;
 });
 
-
-
 /**
  * getPexelsImage
  * Call to Pexels API
@@ -52,4 +50,4 @@ function getPexelsImage(searchTerm, numImages) {
   });
 }
 
-$(document).ready( getPexelsImage("social network", "10") );
+$(document).ready(getPexelsImage("social network", "10"));
