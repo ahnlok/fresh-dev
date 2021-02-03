@@ -47,11 +47,6 @@ $(document).ready(function () {
 
         // alert("Successfully Edited The Post!");
 
-
-        const id = $("#student-id").val();
-
-        // alert("Successfully Edited The Post!");
-
         $.ajax({
             url: `/api/students/${id}`,
             method: "PUT",
