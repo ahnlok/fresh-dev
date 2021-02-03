@@ -1,18 +1,18 @@
 /* Fonts */
 /* Fredericak the Great */
-@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
 /* Titan One */
-@import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Titan+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Titan+One&display=swap');
 /* Bungee Inline */
-@import url("https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
 /* Jomhuria */
-@import url("https://fonts.googleapis.com/css2?family=Jomhuria&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Jomhuria&display=swap');
 /* Anton */
-@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 /* Russon One */
-@import url("https://fonts.googleapis.com/css2?family=Anton&family=Russo+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Russo+One&display=swap');
 /* Noto Serif */
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
 
 img {
   height: 100%;
@@ -43,23 +43,23 @@ body {
 header,
 nav {
   opacity: 0.8;
-  background-color: #f08080;
+  background-color: #F08080;
 }
 
 p {
   font-weight: lighter;
-  font-family: "Titan One";
+  font-family: 'Titan One';
   font-size: 25px;
-  color: #f08080;
+  color: #F08080;
 }
 .studentName {
   font-weight: Bold;
-  font-family: "Noto Serif";
-  color: #f08080;
+  font-family: 'Noto Serif';
+  color: #F08080;
 }
 .list-items {
   font-weight: bold;
-  font-family: "Noto Serif";
+  font-family: 'Noto Serif';
   font-size: 25px;
   color: black;
 }
@@ -81,20 +81,20 @@ p {
   color: ivory;
   font-weight: 500;
   margin-left: 10px;
-  font-family: "Titan One", cursive;
+  font-family: 'Titan One', cursive;
 }
 
 #nav-tag {
   color: ivory;
   font-weight: 500;
-  font-family: "Titan One", cursive;
+  font-family: 'Titan One', cursive;
 }
 
 /* Search */
 .search-tag {
-  color: #f08080;
+  color:#F08080;
   font-weight: 600;
-  font-family: "Bungee Inline", cursive;
+  font-family: 'Bungee Inline', cursive;
   -webkit-text-stroke: 0.5 black;
   font-size: 50px;
 }
@@ -102,22 +102,22 @@ p {
   color: black;
   font-weight: 300;
   font-size: 50px;
-  font-family: "Jomhuria";
+  font-family: 'Jomhuria'
 }
 
 /* Buttons */
 #search-btn {
   display: inline-block;
   color: white;
-  font-family: "Jomhuria";
+  font-family: 'Jomhuria';
   font-size: 40px;
   font-weight: 400;
   text-align: center;
-  background: #f08080;
+  background: #F08080;
   border-radius: 8px;
-  border: #f08080;
+  border: #F08080;
   width: 15%;
-  height: 40px;
+  height: 40px;;
   padding: 0px;
   margin: 4px;
   float: right;
@@ -131,15 +131,15 @@ p {
 #rest-btn {
   display: inline-block;
   color: white;
-  font-family: "Jomhuria";
+  font-family: 'Jomhuria';
   font-size: 40px;
   font-weight: 400;
   text-align: center;
-  background: #f08080;
+  background: #F08080;
   border-radius: 8px;
-  border: #f08080;
+  border: #F08080;
   width: 15%;
-  height: 40px;
+  height: 40px;;
   padding-top: 5px;
   margin: 4px;
 }
@@ -153,15 +153,15 @@ p {
 .saveButton {
   display: inline-block;
   color: white;
-  font-family: "Titan One";
+  font-family: 'Titan One';
   font-size: 25px;
   font-weight: 400;
   text-align: center;
-  background: #f08080;
+  background: #F08080;
   border-radius: 8px;
-  border: #f08080;
+  border: #F08080;
   width: 15%;
-  height: 40px;
+  height: 40px;;
   padding: 0;
 }
 .saveButton:hover {
@@ -173,7 +173,7 @@ p {
 #edit-btn {
   display: inline-block;
   color: white;
-  font-family: "Titan One";
+  font-family: 'Titan One';
   font-size: 25px;
   font-weight: 400;
   text-align: center;
@@ -181,7 +181,7 @@ p {
   border-radius: 8px;
   border: green;
   width: 15%;
-  height: 40px;
+  height: 40px;;
   padding: 0;
 }
 #edit-btn:hover {
@@ -190,10 +190,10 @@ p {
   color: white;
 }
 /* Delete Button */
-#delete-btn {
+#delete-btn{
   display: inline-block;
   color: white;
-  font-family: "Titan One";
+  font-family: 'Titan One';
   font-size: 25px;
   font-weight: 400;
   text-align: center;
@@ -201,7 +201,7 @@ p {
   border-radius: 8px;
   border: red;
   width: 15%;
-  height: 40px;
+  height: 40px;;
   padding: 0;
 }
 #delete-btn:hover {
@@ -213,9 +213,10 @@ p {
 #post-header {
   text-align: center;
   font-weight: 500;
-  font-family: "Bungee Inline";
-  color: #f08080;
+  font-family: 'Bungee Inline';
+  color: #F08080;
 }
+
 
 /* footer */
 .footer-copyright {
@@ -223,7 +224,7 @@ p {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #f08080;
+  background-color: #F08080;
   font-weight: 700;
   color: white;
   flex-shrink: 0;
@@ -234,7 +235,7 @@ p {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #f08080;
+  background-color: #F08080;
   font-weight: 700;
   color: white;
 }

@@ -36,16 +36,10 @@
 
 ---
 ## DEMO:
-![Fresh-Dev](./public/img/demo.gif)
+![Fresh-Dev](./Assets/software-team-demo.gif)
 
 ## Preview: 
-![Final-homepage](./public/img/final-homepage.png)
-
-![Final-post-page](./public/img/final-post-page.png)
-
-![Final-saved-page](./public/img/final-saved-page.png)
-
-![Final-list-page](./public/img/final-list-page.png)
+![Fresh-Dev](./Assets/software-team.png)
 
 ---
 ## Installation
