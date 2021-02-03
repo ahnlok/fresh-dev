@@ -5,6 +5,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Titan+One&display=swap');
 /* Bungee Inline */
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
+/* Jomhuria */
+@import url('https://fonts.googleapis.com/css2?family=Jomhuria&display=swap');
 
 img {
   height: 100%;
@@ -76,33 +78,75 @@ nav {
 .search-label {
   color: black;
   font-weight: 300;
-  font-size: 20px;
-
+  font-size: 50px;
+  font-family: 'Jomhuria'
 }
-/* For POST (Sung) */
-.post-title {
-  font-weight: bold;
+
+/* Buttons */
+#search-btn {
+  display: inline-block;
+  color: white;
+  font-family: 'Jomhuria';
+  font-size: 40px;
+  font-weight: 400;
   text-align: center;
+  background: #F08080;
+  border-radius: 8px;
+  border: #F08080;
+  width: 15%;
+  height: 40px;;
+  padding: 0px;
+  margin: 4px;
 }
-
-.post-require {
-  font-weight: bold;
+#search-btn:hover {
+  background-image: none !important;
+  background: lightblue !important;
+  color: white;
+}
+/* rest button */
+#rest-btn {
+  display: inline-block;
+  color: white;
+  font-family: 'Jomhuria';
+  font-size: 40px;
+  font-weight: 400;
   text-align: center;
+  background: #F08080;
+  border-radius: 8px;
+  border: #F08080;
+  width: 15%;
+  height: 40px;;
+  padding-top: 5px;
+  margin: 4px;
+}
+#rest-btn:hover {
+  background-image: none !important;
+  background: lightblue !important;
+  color: white;
 }
 
+
+/* Header */
+#post-header {
+  text-align: center;
+  font-weight: 500;
+  font-family: 'Bungee Inline';
+  color: #F08080;
+}
 /* footer */
 .footer-copyright {
-  position: absolute;
+  position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
   background-color: #F08080;
   font-weight: 700;
   color: white;
+  flex-shrink: 0;
 }
 
 .footer-post {
-  position: relative;
+  position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
